@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the Hills View Resort Logere photo gallery - beautiful images of our rooms, swimming pool, restaurant, events, and the stunning Maragoli Hills landscape.">
+    <meta name="keywords"
+        content="Hills View Resort Gallery, Maragoli Hills Photos, Vihiga Hotel Images, Kenya Resort Pictures">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Photo Gallery | Hills View Resort Logere">
+    <meta property="og:description"
+        content="Take a visual tour of Hills View Resort Logere and the beautiful Maragoli Hills.">
+    <meta property="og:type" content="website">
+
+    <title>Photo Gallery | Hills View Resort Logere</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="References/HILLS VIEW LOGO PNG.png">
+
+    <style>
+        /* Gallery specific styles */
+        .gallery-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .gallery-masonry .gallery-item:nth-child(3n+1) {
+            grid-row: span 2;
+        }
+
+        .gallery-masonry .gallery-item:nth-child(3n+1) {
+            aspect-ratio: 3/4;
+        }
+
+        .gallery-masonry .gallery-item {
+            aspect-ratio: 4/3;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-masonry {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-masonry .gallery-item,
+            .gallery-masonry .gallery-item:nth-child(3n+1) {
+                aspect-ratio: 1;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-masonry {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .load-more-wrapper {
+            text-align: center;
+            margin-top: var(--space-2xl);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="References/HILLS VIEW LOGO PNG.png" alt="Hills View Resort Logo" class="logo-img">
+                <span class="logo-text">Hills View Resort</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-cta">
+                    <a href="contact.html" class="btn btn-secondary btn-sm">Book Now</a>
+                </li>
+            </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero page-hero">
+        <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.14_e1a13b99.jpg" alt="Hills View Resort gallery"
+            class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Visual Tour</span>
+            <h1 class="hero-title">Photo Gallery</h1>
+            <p class="hero-description">Explore the beauty of Hills View Resort Logere</p>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Gallery</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Our Gallery</span>
+                <h2 class="section-title">Explore Our Resort</h2>
+                <p class="section-description">Browse through our collection of photos showcasing our rooms, facilities,
+                    events, and the beautiful Maragoli Hills landscape.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="rooms">Rooms</button>
+                <button class="filter-btn" data-filter="pool">Pool</button>
+                <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-masonry" id="galleryGrid">
+                <!-- Row 1 -->
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.25_9a28dbeb.jpg"
+                        alt="Resort exterior with nature view" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.24_c17f23b4.jpg"
+                        alt="Standard room interior" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.27_38a48e2a.jpg" alt="Cottage room"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.28_6a4e75a2.jpg"
+                        alt="Cottage deluxe" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="pool">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.30_23b3889f.jpg"
+                        alt="Swimming pool area" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="pool">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.32_f98f9d10.jpg" alt="Pool view"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.35_9f739b8a.jpg"
+                        alt="Maragoli Hills landscape" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.37_e8b1a4e2.jpg"
+                        alt="Resort gardens" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.38_9f5b343e.jpg" alt="Room interior"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="gallery-item reveal" data-category="events">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.46_35e33df3.jpg" alt="Event setup"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="events">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.36.47_72be5f0f.jpg"
+                        alt="Conference hall" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="restaurant">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.01_52a89c6e.jpg"
+                        alt="Restaurant area" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="gallery-item reveal" data-category="restaurant">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.03_113055e0.jpg" alt="Dining setup"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="restaurant">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.04_21bc0775.jpg" alt="Bar area"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="restaurant">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.05_e3f0da37.jpg"
+                        alt="Food presentation" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.07_fb28cf79.jpg" alt="Bedroom"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.08_9f53427b.jpg"
+                        alt="Room amenities" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.10_4a1ac945.jpg" alt="Bathroom"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.11_4f335ec5.jpg" alt="Bath tub"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.13_67be346e.jpg" alt="Exterior view"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.14_e1a13b99.jpg"
+                        alt="Resort grounds" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 8 -->
+                <div class="gallery-item reveal" data-category="pool">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.17_c454dd67.jpg"
+                        alt="Pool party setup" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.19_f169a85e.jpg" alt="Scenic view"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="events">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.21_2f400b00.jpg" alt="Event"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 9 -->
+                <div class="gallery-item reveal" data-category="events">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.23_eef3e4fc.jpg" alt="Party event"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.27_97ceccdb.jpg"
+                        alt="Green landscape" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.28_fceee8fb.jpg" alt="Hills view"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 10 -->
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.29_f565f5bb.jpg"
+                        alt="Resort panorama" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="events">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.35_e27376e6.jpg" alt="Night event"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.38.10_1ca8a562.jpg" alt="Hiking area"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Row 11 -->
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.38.11_2f739753.jpg"
+                        alt="Maragoli Hills" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.38.12_8e79704d.jpg"
+                        alt="Nature scenery" loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.38.13_1f18bd61.jpg" alt="Forest path"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+
+                <!-- Additional Images -->
+                <div class="gallery-item reveal" data-category="pool">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.32_4949adcb.jpg" alt="Pool area"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="rooms">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.38_149043b8.jpg" alt="Room view"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item reveal" data-category="nature">
+                    <img src="References/Gallery/WhatsApp Image 2025-12-18 at 11.37.42_892dc4a9.jpg" alt="Landscape"
+                        loading="lazy">
+                    <div class="gallery-item-overlay"><span>+</span></div>
+                </div>
+            </div>
+
+            <div class="load-more-wrapper reveal">
+                <p style="color: var(--gray); margin-bottom: var(--space-lg);">Showing 36 of 137+ photos</p>
+                <a href="contact.html" class="btn btn-primary">Visit Us to See More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Love What You See?</h2>
+                <p>Book your stay now and experience the beauty of Hills View Resort in person!</p>
+                <div class="hero-buttons">
+                    <a href="rooms.html" class="btn btn-secondary btn-lg">View Rooms</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="References/HILLS VIEW LOGO PNG.png" alt="Hills View Resort Logo" class="logo-img"
+                            style="height: 60px;">
+                    </div>
+                    <h3 class="logo-text" style="margin-top: var(--space-md);">Hills View Resort</h3>
+                    <p>A refreshing nature escape at the foot of Maragoli Hills offering executive stays, vibrant
+                        experiences, and unforgettable hospitality.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="rooms.html">Accommodation</a></li>
+                        <li><a href="about.html">Conferences</a></li>
+                        <li><a href="about.html">Restaurant & Bar</a></li>
+                        <li><a href="about.html">Swimming Pool</a></li>
+                        <li><a href="about.html">Events & Parties</a></li>
+                        <li><a href="about.html">Hiking Packages</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Maragoli Hills, Vihiga County, Kenya</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+254 700 000 000</span>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@hillsviewresort.co.ke</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2021 - 2025 Hills View Resort Logere. All Rights Reserved.</p>
+                <p>Designed with ❤️ for unforgettable experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery image" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254700000000" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Gallery Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let currentIndex = 0;
+        let visibleImages = [];
+
+        function updateVisibleImages() {
+            visibleImages = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+        }
+
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                updateVisibleImages();
+                currentIndex = visibleImages.indexOf(item);
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
+            const img = visibleImages[currentIndex].querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        });
+
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex + 1) % visibleImages.length;
+            const img = visibleImages[currentIndex].querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lightboxPrev.click();
+            if (e.key === 'ArrowRight') lightboxNext.click();
+        });
+    </script>
+</body>
+
+</html>
