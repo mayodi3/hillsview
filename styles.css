@@ -2231,3 +2231,223 @@ textarea.form-control {
     scroll-behavior: auto;
   }
 }
+
+/* ==========================================
+   QUICK WIN ENHANCEMENTS
+   ========================================== */
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  z-index: var(--z-fixed);
+  box-shadow: var(--shadow-lg);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.scroll-to-top svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Animated Counters */
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.stat-number.counting {
+  transition: none;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+  padding: var(--space-5xl) 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-xl);
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-family: var(--font-heading);
+  font-size: 80px;
+  color: var(--secondary);
+  opacity: 0.3;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.testimonial-content {
+  font-style: italic;
+  color: var(--gray);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--fs-lg);
+}
+
+.testimonial-info h5 {
+  font-size: var(--fs-base);
+  margin-bottom: 2px;
+  font-family: var(--font-body);
+}
+
+.testimonial-info span {
+  font-size: var(--fs-sm);
+  color: var(--secondary);
+}
+
+.testimonial-stars {
+  color: var(--secondary);
+  margin-bottom: var(--space-md);
+  display: flex;
+  gap: 2px;
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--dark);
+  color: var(--white);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-tooltip);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 90vw;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.toast svg {
+  flex-shrink: 0;
+}
+
+/* Form Validation Styles */
+.form-control.error {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.form-control.success {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.form-error-message {
+  color: #ef4444;
+  font-size: var(--fs-xs);
+  margin-top: var(--space-xs);
+  display: none;
+}
+
+.form-control.error+.form-error-message {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: var(--space-xl);
+  }
+}
