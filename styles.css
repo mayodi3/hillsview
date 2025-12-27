@@ -7,25 +7,28 @@
    CSS CUSTOM PROPERTIES (Design Tokens)
    ========================================== */
 :root {
-  /* Primary Colors - Nature Inspired */
-  --primary: #2d5a3d;
-  --primary-light: #4a7c59;
-  --primary-dark: #1e3d2a;
-  --primary-rgb: 45, 90, 61;
+  /* Primary Colors - Nature Inspired (Deepened for Luxury) */
+  --primary: #1A3C2B;
+  /* Deeper Forest Green */
+  --primary-light: #3E6B53;
+  --primary-dark: #0D2618;
+  --primary-rgb: 26, 60, 43;
 
-  /* Secondary Colors - Warm Gold */
-  --secondary: #c4a35a;
-  --secondary-light: #d4b86f;
-  --secondary-dark: #a88a3c;
+  /* Secondary Colors - Antique Gold (Less Yellow, More Metallic) */
+  --secondary: #D4AF37;
+  /* Metallic Gold */
+  --secondary-light: #E5C568;
+  --secondary-dark: #AA8C2C;
 
-  /* Neutral Colors */
-  --dark: #1a1a1a;
-  --dark-gray: #333333;
-  --gray: #666666;
-  --light-gray: #999999;
-  --lighter-gray: #e5e5e5;
-  --light: #f8f6f1;
-  --white: #ffffff;
+  /* Neutral Colors (Softened) */
+  --dark: #121212;
+  --dark-gray: #2C2C2C;
+  --gray: #6B6B6B;
+  --light-gray: #A0A0A0;
+  --lighter-gray: #E0E0E0;
+  --light: #FAF9F6;
+  /* Off-white / Eggshell */
+  --white: #FFFFFF;
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -42,27 +45,29 @@
   --fs-3xl: clamp(2.5rem, 2rem + 3vw, 4rem);
   --fs-hero: clamp(3rem, 2.5rem + 4vw, 5rem);
 
-  /* Spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-2xl: 3rem;
-  --space-3xl: 4rem;
-  --space-4xl: 6rem;
-  --space-5xl: 8rem;
+  /* Spacing (Expanded for Luxury) */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+  --space-4xl: 10rem;
+  --space-5xl: 12rem;
 
   /* Layout */
-  --container-max: 1200px;
-  --container-wide: 1400px;
+  --container-max: 1300px;
+  /* Wider container */
+  --container-wide: 1500px;
   --container-narrow: 800px;
 
   /* Effects */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 2px;
+  /* Sharper corners are more modern/luxury */
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
   --radius-full: 9999px;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -71,9 +76,10 @@
   --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
   --shadow-glow: 0 0 30px rgba(45, 90, 61, 0.3);
 
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-  --transition-slow: 500ms ease;
+  --transition-fast: 200ms ease;
+  --transition-base: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Smoother curve */
+  --transition-slow: 700ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Z-Index Scale */
   --z-dropdown: 100;
@@ -103,7 +109,8 @@ html {
 body {
   font-family: var(--font-body);
   font-size: var(--fs-base);
-  line-height: 1.7;
+  line-height: 1.8;
+  /* Increased line height */
   color: var(--dark);
   background-color: var(--white);
   overflow-x: hidden;
@@ -197,7 +204,8 @@ p {
 }
 
 .section {
-  padding: var(--space-5xl) 0;
+  padding: var(--space-4xl) 0;
+  /* More vertical space */
 }
 
 .section-sm {
@@ -369,14 +377,19 @@ p {
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  padding: var(--space-md) var(--space-xl);
+  padding: 1rem 2.5rem;
+  /* Reduced from var(--space-md) var(--space-xl) */
   font-family: var(--font-body);
   font-size: var(--fs-sm);
-  font-weight: 600;
+  font-weight: 500;
+  /* Slightly lighter weight */
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 2px solid transparent;
-  border-radius: var(--radius-sm);
+  letter-spacing: 2px;
+  /* Wider tracking */
+  border: 1px solid transparent;
+  /* Thinner border */
+  border-radius: 0;
+  /* Square buttons are more "luxury" */
   cursor: pointer;
   transition: all var(--transition-base);
   text-decoration: none;
@@ -389,10 +402,10 @@ p {
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background: transparent;
+  color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: none;
 }
 
 .btn-secondary {
@@ -535,7 +548,8 @@ p {
 }
 
 .logo-img {
-  height: 50px;
+  height: 80px;
+  /* Increased from 50px */
   width: auto;
   flex-shrink: 0;
 }
@@ -598,7 +612,8 @@ p {
   border: none;
   cursor: pointer;
   padding: var(--space-sm);
-  z-index: var(--z-modal);
+  z-index: 9999;
+  /* Ensure it is above everything */
 }
 
 .nav-toggle span {
@@ -630,7 +645,10 @@ p {
    ========================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh !important;
+  /* Fallback */
+  height: 100dvh !important;
+  /* Dynamic Viewport Height for mobile */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -672,9 +690,12 @@ p {
   font-size: var(--fs-sm);
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
+  /* Wider tracking */
   color: var(--secondary);
   margin-bottom: var(--space-lg);
+  display: block;
+  /* Ensure block level */
   animation: fadeInDown 0.8s ease forwards;
 }
 
@@ -709,7 +730,84 @@ p {
 /* Page Hero (smaller) */
 .page-hero {
   min-height: 60vh;
+  height: auto !important;
+  /* Override 100dvh from .hero */
   padding-top: 100px;
+}
+
+/* Ensure text is readable on static images in subpages */
+.page-hero .hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+}
+
+/* ==========================================
+   EDITORIAL & BROKEN GRID LAYOUTS (Phase 2)
+   ========================================== */
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.feature-row:last-child {
+  margin-bottom: 0;
+}
+
+.feature-row.reverse .feature-text {
+  order: -1;
+}
+
+.feature-img {
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  height: 500px;
+}
+
+.feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.feature-row:hover .feature-img img {
+  transform: scale(1.05);
+  /* Subtle zoom */
+}
+
+.feature-text {
+  padding: var(--space-xl);
+}
+
+.feature-text h3 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-md);
+  color: var(--primary);
+}
+
+.feature-text p {
+  color: var(--gray);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-xl);
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .feature-row.reverse .feature-text {
+    order: 0;
+  }
+
+  .feature-img {
+    height: 350px;
+  }
 }
 
 .page-hero .hero-title {
@@ -2450,5 +2548,75 @@ textarea.form-control {
 
   .testimonial-card {
     padding: var(--space-xl);
+  }
+}
+
+/* ==========================================
+   MICRO-INTERACTIONS & ANIMATIONS (Phase 3)
+   ========================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Ultra smooth ease */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays if children have reveal */
+.reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.reveal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+/* ==========================================
+   MOBILE NAVBAR STYLES
+   ========================================== */
+@media (max-width: 992px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 60, 43, 0.98);
+    /* Deep Forest Green with opacity */
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-2xl);
+    gap: var(--space-xl);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    z-index: 9998;
+    /* Behind the toggle button (9999) but above content */
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: var(--fs-lg);
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    margin-top: var(--space-lg);
   }
 }

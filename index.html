@@ -38,7 +38,6 @@
     <div class="container nav-container">
       <a href="index.html" class="logo">
         <img src="assets/logo.png" alt="Hills View Resort Logo" class="logo-img">
-        <span class="logo-text">Hills View Resort</span>
       </a>
 
       <ul class="nav-menu" id="navMenu">
@@ -76,8 +75,8 @@
         style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 1; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Nature.
         Comfort. Experience.</p>
       <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-primary btn-lg" style="box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Book Your
-          Stay</a>
+        <a href="contact.html" class="btn btn-primary"
+          style="box-shadow: 0 4px 6px rgba(0,0,0,0.3); padding: 12px 30px; font-size: 0.95rem;">Book Your Stay</a>
       </div>
     </div>
   </section>
@@ -304,7 +303,7 @@
         <!-- Room 3 -->
         <div class="card room-card reveal">
           <div class="card-img">
-            <img src="assets/gallery/bedroom_double_bed_wide.jpg" alt="Cottage Deluxe Room">
+            <img src="assets/gallery/bedroom_bed_wide.jpg" alt="Cottage Deluxe Room">
             <span class="card-badge">Premium</span>
           </div>
           <div class="card-body">
@@ -438,28 +437,46 @@
         <p class="section-description">Create unforgettable memories with our special events and activities.</p>
       </div>
 
-      <div class="experience-grid">
-        <div class="experience-card reveal">
-          <img src="assets/gallery/bar_interior_red_pillars.jpg" alt="RnB Weekend Nights">
-          <div class="experience-card-content">
-            <h4>RnB Weekend Nights</h4>
-            <p>Join us every weekend for themed RnB parties with great music and vibes.</p>
+      <div class="editorial-layout">
+        <!-- Feature 1: RnB Nights (Image Left) -->
+        <div class="feature-row reveal">
+          <div class="feature-img">
+            <img src="assets/Gallery/bar_interior_red_pillars.jpg" alt="RnB Weekend Nights">
+          </div>
+          <div class="feature-text">
+            <h3>RnB Weekend Nights</h3>
+            <p>Experience the vibrant nightlife of Vihiga with our signature weekend events. Join us every Saturday for
+              themed RnB parties featuring top DJs, signature cocktails, and an electric atmosphere that keeps the
+              energy high all night long.</p>
+            <a href="contact.html" class="btn btn-outline-dark">Reserve a Table</a>
           </div>
         </div>
 
-        <div class="experience-card reveal">
-          <img src="assets/gallery/outdoor_seating_blue_umbrellas.jpg" alt="Pool Parties">
-          <div class="experience-card-content">
-            <h4>Monthly Pool Parties</h4>
-            <p>Dive into fun with our exciting monthly pool parties featuring DJs and refreshments.</p>
+        <!-- Feature 2: Pool Parties (Image Right) -->
+        <div class="feature-row reverse reveal">
+          <div class="feature-img">
+            <img src="assets/Gallery/outdoor_seating_blue_umbrellas.jpg" alt="Monthly Pool Parties">
+          </div>
+          <div class="feature-text">
+            <h3>Monthly Pool Parties</h3>
+            <p>Dive into fun with our exclusive monthly pool parties. Enjoy a refreshing splash in our pristine pool,
+              accompanied by live music, poolside barbecue, and refreshing drinks. It's the perfect way to unwind and
+              socialize under the sun.</p>
+            <a href="contact.html" class="btn btn-outline-dark">Join the Fun</a>
           </div>
         </div>
 
-        <div class="experience-card reveal">
-          <img src="assets/gallery/resort_exterior_trees.jpg" alt="Hiking to Maragoli Hills">
-          <div class="experience-card-content">
-            <h4>Maragoli Hills Hiking</h4>
-            <p>Explore the scenic Maragoli Hills with our guided hiking packages.</p>
+        <!-- Feature 3: Hiking (Image Left) -->
+        <div class="feature-row reveal">
+          <div class="feature-img">
+            <img src="assets/Gallery/resort_exterior_trees.jpg" alt="Maragoli Hills Hiking">
+          </div>
+          <div class="feature-text">
+            <h3>Maragoli Hills Hiking</h3>
+            <p>For the adventure seekers, we explore the scenic Maragoli Hills with our guided hiking packages.
+              breathtaking views, fresh air, and a chance to reconnect with nature right at our doorstep. Perfect for
+              groups and nature enthusiasts.</p>
+            <a href="contact.html" class="btn btn-outline-dark">Book an Adventure</a>
           </div>
         </div>
       </div>
@@ -636,7 +653,7 @@
         <!-- Brand Column -->
         <div class="footer-brand">
           <div class="logo">
-            <img src="assets/logo" alt="Hills View Resort Logo" class="logo-img" style="height: 60px;">
+            <img src="assets/logo.png" alt="Hills View Resort Logo" class="logo-img" style="height: 60px;">
           </div>
           <h3 class="logo-text" style="margin-top: var(--space-md);">Hills View Resort</h3>
           <p>A refreshing nature escape at the foot of Maragoli Hills offering executive stays, vibrant experiences, and
@@ -737,131 +754,9 @@
     </svg>
   </a>
 
-  <!-- JavaScript -->
-  <script>
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
 
-    // Mobile menu toggle
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
 
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealOnScroll = () => {
-      revealElements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (elementTop < windowHeight - 100) {
-          el.classList.add('active');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
-    // Scroll to Top Button
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) {
-        scrollToTopBtn.classList.add('visible');
-      } else {
-        scrollToTopBtn.classList.remove('visible');
-      }
-    });
-
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Animated Number Counters
-    const animateCounters = () => {
-      const counters = document.querySelectorAll('.stat-number');
-
-      counters.forEach(counter => {
-        if (counter.classList.contains('counted')) return;
-
-        const elementTop = counter.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (elementTop < windowHeight - 100) {
-          counter.classList.add('counted');
-          const target = counter.innerText;
-          const numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
-          const suffix = target.replace(/[0-9]/g, '');
-          let current = 0;
-          const increment = numericTarget / 50;
-          const duration = 1500;
-          const stepTime = duration / 50;
-
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= numericTarget) {
-              counter.innerText = numericTarget + suffix;
-              clearInterval(timer);
-            } else {
-              counter.innerText = Math.floor(current) + suffix;
-            }
-          }, stepTime);
-        }
-      });
-    };
-
-    window.addEventListener('scroll', animateCounters);
-    window.addEventListener('load', animateCounters);
-
-    // Toast Notification Helper
-    function showToast(message, type = 'success') {
-      const existingToast = document.querySelector('.toast');
-      if (existingToast) existingToast.remove();
-
-      const toast = document.createElement('div');
-      toast.className = `toast ${type}`;
-      toast.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          ${type === 'success'
-          ? '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>'
-          : '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>'
-        }
-        </svg>
-        <span>${message}</span>
-      `;
-      document.body.appendChild(toast);
-
-      setTimeout(() => toast.classList.add('show'), 10);
-      setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 300);
-      }, 4000);
-    }
-  </script>
 
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
@@ -870,6 +765,7 @@
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -62,7 +62,6 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="assets/logo.png" alt="Hills View Resort Logo" class="logo-img">
-                <span class="logo-text">Hills View Resort</span>
             </a>
 
             <ul class="nav-menu" id="navMenu">
@@ -104,8 +103,7 @@
     <!-- Contact Info Cards -->
     <section class="section">
         <div class="container">
-            <div class="grid"
-                style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-4xl);">
+            <div class="info-grid reveal">
 
                 <!-- Phone Card -->
                 <div class="contact-info-card reveal">
@@ -177,7 +175,7 @@
             <!-- Contact Form and Map -->
             <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="contact-form reveal">
+                <div class="contact-form-wrapper">
                     <h3 style="margin-bottom: var(--space-lg);">Send Us a Message</h3>
                     <form id="contactForm">
                         <div class="form-group">
@@ -241,10 +239,9 @@
                         <h3 style="margin-bottom: var(--space-lg);">Our Location</h3>
                         <div class="map-container">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127672.75!2d34.6!3d0.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178119e5c8b0a0f1%3A0x1234567890abcdef!2sMaragoli%20Hills%2C%20Vihiga%20County%2C%20Kenya!5e0!3m2!1sen!2ske!4v1703520000000!5m2!1sen!2ske"
-                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                                title="Hills View Resort Location">
-                            </iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d127674.05575184026!2d34.7242!3d0.08191999999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x178009c4dc8129f7%3A0x86e02fad843dd638!3m2!1d0.008448899999999999!2d34.7157745!4m5!1s0x178009c4dc8129f7%3A0x86e02fad843dd638!2s88%2C%20Majengo!3m2!1d0.008448899999999999!2d34.7157745!5e0!3m2!1sen!2ske!4v1766846495164!5m2!1sen!2ske"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
 
@@ -385,7 +382,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="assets/logo" alt="Hills View Resort Logo" class="logo-img" style="height: 60px;">
+                        <img src="assets/logo.png" alt="Hills View Resort Logo" class="logo-img" style="height: 60px;">
                     </div>
                     <h3 class="logo-text" style="margin-top: var(--space-md);">Hills View Resort</h3>
                     <p>A refreshing nature escape at the foot of Maragoli Hills offering executive stays, vibrant
@@ -667,6 +664,7 @@
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
+    <script src="script.js"></script>
 </body>
 
 </html>
