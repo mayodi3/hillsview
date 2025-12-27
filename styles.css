@@ -103,6 +103,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -114,6 +115,8 @@ body {
   color: var(--dark);
   background-color: var(--white);
   overflow-x: hidden;
+  height: 100%;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -645,10 +648,9 @@ p {
    ========================================== */
 .hero {
   position: relative;
-  height: 100vh !important;
-  /* Fallback */
-  height: 100dvh !important;
-  /* Dynamic Viewport Height for mobile */
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2102,16 +2104,19 @@ textarea.form-control {
   .nav-menu {
     position: fixed;
     top: 0;
+    left: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
-    height: 100dvh;
+    height: 100%;
+    /* Fill parent (fixed inset) */
     background: rgba(26, 60, 43, 0.98);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 100px var(--space-2xl) var(--space-2xl);
-    gap: var(--space-lg);
+    padding: 120px var(--space-2xl) var(--space-2xl);
+    gap: var(--space-md);
     transform: translateX(100%);
     transition: transform var(--transition-base);
     z-index: 9998;
