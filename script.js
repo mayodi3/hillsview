@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
         });
 
         // Close menu when clicking a link
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
             });
         });
     }
