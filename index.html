@@ -62,11 +62,12 @@
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
-    <video autoplay muted loop playsinline class="hero-bg"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-      <source src="assets/Video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="hero-video-container">
+      <div class="hero-video-placeholder" id="heroPlaceholder"></div>
+      <video muted loop playsinline class="hero-bg" id="heroVideo" poster="assets/gallery/resort_overview_u_shape.jpg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title" style="margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Hills View Resort

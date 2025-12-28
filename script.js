@@ -30,16 +30,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Parallax Effect for Hero Backgrounds
-    const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) {
+    const heroVideoContainer = document.querySelector('.hero-video-container');
+    if (heroVideoContainer) {
         window.addEventListener('scroll', () => {
             const scrollValue = window.scrollY;
             if (scrollValue < window.innerHeight) {
-                // Move image slower than scroll
-                heroBg.style.transform = `translateY(${scrollValue * 0.5}px)`;
+                // Move container slower than scroll
+                heroVideoContainer.style.transform = `translateY(${scrollValue * 0.5}px)`;
             }
         });
     }
+
+    // Hero Video & Image Lazy Loader
+    function initializeHeroBackgrounds() {
+        // Handle Video (Homepage)
+        const heroVideo = document.getElementById('heroVideo');
+        const placeholder = document.getElementById('heroPlaceholder');
+
+        if (heroVideo && placeholder) {
+            const videoSrc = 'assets/Video.mp4';
+
+            heroVideo.src = videoSrc;
+            heroVideo.load();
+
+            // Use 'canplay' to trigger the transition as soon as basic video is ready
+            heroVideo.addEventListener('canplay', () => {
+                heroVideo.play().then(() => {
+                    heroVideo.classList.add('loaded');
+                    setTimeout(() => {
+                        placeholder.classList.add('hidden');
+                    }, 600);
+                }).catch(e => console.warn('Autoplay prevented:', e));
+            }, { once: true });
+        }
+
+        // Handle Images (Other pages)
+        const heroImages = document.querySelectorAll('img.hero-bg');
+        heroImages.forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+            }
+        });
+    }
+
+    initializeHeroBackgrounds();
 
     // Mobile Navbar Toggle
     const navToggle = document.getElementById('navToggle');
